@@ -1,0 +1,60 @@
+#********** LBCS CATALOGUE (PRELIMINARY VERSION) **********
+#
+#This is the current catalogue of the LBCS project, which is searching for
+#long-baseline calibrators for LOFAR. This is done by snapshot observations
+#with 30 beams, for 3 minutes each. Fringe solutions are sought for the 
+#international array with the phased superterp; a source is currently 
+#classified as a "good" calibrator to a given station based on the dispersion
+#in short-period delay/phase solutions (this is the quantity which agrees best 
+#with the goodness determined by eye in a subset of the data).
+#
+#If you use the data, please reference the paper: Jackson et al.2016,AA 595,86.
+#
+#Format of the catalogue:
+#
+#1) Observation number
+#2) RA of the pointing (in most cases determined from the WENSS catalogue,
+#   from which the sources are mainly selected)
+#3) Dec
+#4) and 5) Observation date and time
+#6) Goodness of the calibrator on the nine international stations:
+#   DE601 Effelsberg
+#   DE602 Unterweilenbach
+#   DE603 Tautenberg
+#   DE604 Potsdam
+#   DE605 Juelich
+#   FR606 Nancay
+#   SE607 Onsala
+#   UK608 Chilbolton
+#   DE609 Norderstedt
+#   PL610 Borowiec
+#   PL611 Lazy
+#   PL612 Baldy
+#   IE613 Birr
+#   where "P" means a clear detection of fringes, "S" a marginal detection,
+#   "X" no detection, and "-" problems with the antenna.
+#7) Quality of the observation, judged by the percentage of source detections
+#   on the shorter baselines. Above 20 is probably fine, below 10 is almost
+#   certainly a bad observation.
+#
+#In general: if a source is detected, it is almost certainly OK as a calibrator 
+#                to that station
+#            if a source is not detected in a "good" observation it is probably
+#                not OK, but this is not guaranteed
+#            if a source is not detected in a "dodgy" or poor observations it ma#
+#                or may not be OK. We are working on these cases
+#            many sources are OK on short baselines (601,605,609) but not on 
+#                others indicating they are resolved
+#            if in doubt you may want to look at the PNG file of the observation
+#                (which shows the Fourier transform of the data) and the 
+#                composite fringe-rate and delay map of the field. These will
+#                appear in the database shortly.
+#
+# You can make a zoomable plot of these sources with the script
+# www.jb.man.ac.uk/~njj/lobos_stats.public.py . Green, yellow, orange blobs
+# are calibrators with variable degrees of confidence and/or resolution;
+# blue crosses are non-calibrators, magenta and red are non-calibrators but
+# in areas of poor quality observations. These cluster around CygA and CasA
+# which is probably not a coincidence.
+#
+#******************************************************************************
